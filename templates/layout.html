@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="refresh" content="5">
+    <title>ZenDesk Phone Queue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <!-- FontAwesome -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    	.header {
+			background-color: #464650;
+			text-align:	center;
+			}
+    </style>
+</head>
+
+<body>
+  <div class="row header">
+    <img src="LOGO IMAGE URL">&nbsp
+  </div>
+    <div class="row">
+      <div class="col-xs-3">
+      </div>
+      <div class="col-xs-6 col-xs-offset-3">
+        {% block content %}{% endblock %}
+      </div>
+      <div class="col-xs-3">
+      </div>
+    </div>
+    <!-- JQuery Source -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- My jquery file -->
+    <!--<script src="apps.js"></script>-->
+</body>
+
+</html>

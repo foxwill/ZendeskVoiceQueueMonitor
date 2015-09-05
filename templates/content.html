@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+  <div class="row col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+    <table class="table table-hover">
+      <tr>
+        <th>
+          <p class="text-left">Current Queue</p>
+        </th>
+        <th>
+          <p class="text-right">Duration (seconds)</p>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Calls Waiting</p>
+        </td>
+        <td>
+          <span class="calls-waiting"><p class="text-right">{{currentQueue['current_queue_activity']['calls_waiting']}}</p></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Average Wait Time</p>
+        </td>
+        <td>
+          <span class="calls-average"><p class="text-right">{{currentQueue['current_queue_activity']['average_wait_time']}}</p></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Longest Wait Time</p>
+        </td>
+        <td>
+          <span class="calls-longest"><p class="text-right">{{currentQueue['current_queue_activity']['longest_wait_time']}}</p></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <div class="row col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+    <table class="table table-hover">
+      <tr>
+        <th>
+          <p class="text-left">Queue History (Last 24 Hours)</p>
+        </th>
+        <th>
+          <!--<p class="text-right">Duration (seconds)</p>-->
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Total Calls</p>
+        </td>
+        <td>
+          <span class="calls-waiting"><p class="text-right">{{historicQueue['historical_queue_activity']['total_calls']}}</p></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Most Calls Waiting</p>
+        </td>
+        <td>
+          <span class="calls-average"><p class="text-right">{{historicQueue['historical_queue_activity']['most_calls_waiting']}}</p></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Average Wait Time</p>
+        </td>
+        <td>
+          <span class="calls-longest"><p class="text-right">{{historicQueue['historical_queue_activity']['average_wait_time']}}</p></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Longest Wait Time</p>
+        </td>
+        <td>
+          <span class="calls-longest"><p class="text-right">{{historicQueue['historical_queue_activity']['longest_wait_time']}}</p></span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p class="text-left">Average Talk Time</p>
+        </td>
+        <td>
+          <span class="calls-longest"><p class="text-right">{{historicQueue['historical_queue_activity']['average_talk_time']}}</p></span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+{% endblock %}
